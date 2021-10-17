@@ -1,7 +1,7 @@
 import java.io.*;
 class EvenOrOdd
 {
-  public static void main(Sting args[])thros IOException
+  public static void main(String args[])throws IOException
   {
     BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
     int n,rem;
