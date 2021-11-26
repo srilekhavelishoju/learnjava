@@ -1,17 +1,17 @@
 package EdyodaPractice.Threads.AssignmentOnThreads;
 
-public class ASingleTonExForLazyInitializationThreadSafe
+public class ASingleTonImplementationThreadSafe
 {
-    private static volatile ASingleTonExForLazyInitializationThreadSafe instance;
+    private static volatile ASingleTonImplementationThreadSafe instance;
     private static Object mutex=new Object();
 
-    private ASingleTonExForLazyInitializationThreadSafe()
+    private ASingleTonImplementationThreadSafe()
     {
 
     }
-    public static ASingleTonExForLazyInitializationThreadSafe getInstance()
+    public static ASingleTonImplementationThreadSafe getInstance()
     {
-        ASingleTonExForLazyInitializationThreadSafe result=instance;
+        ASingleTonImplementationThreadSafe result=instance;
         if(result==null)
         {
             synchronized (mutex)
@@ -19,7 +19,7 @@ public class ASingleTonExForLazyInitializationThreadSafe
                 result=instance;
                 if(result==null)
                 {
-                    instance=result=new ASingleTonExForLazyInitializationThreadSafe();
+                    instance=result=new ASingleTonImplementationThreadSafe();
 
                 }
             }
